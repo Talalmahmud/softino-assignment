@@ -150,7 +150,7 @@ const ProductDetails = (props: Props) => {
         </p>
       </button>
 
-      {toggle && <Cart />}
+      {toggle && <Cart toggle={toggle} setToggle={setToggle} />}
     </div>
   );
 };

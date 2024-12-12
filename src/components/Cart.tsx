@@ -1,6 +1,10 @@
 import React from "react";
 
-const Cart = () => {
+type Props = {
+  toggle: any;
+  setToggle: any;
+};
+const Cart = ({ toggle, setToggle }: Props) => {
   const cartItems = [
     {
       id: 1,
@@ -76,11 +80,14 @@ const Cart = () => {
         </table>
         <div className="mt-6 flex flex-col gap-4 items-end justify-end ">
           <div className=" flex space-x-4">
-            <div className=" px-[18px] h-[36px] flex justify-center items-center border-[1px] border-gray-200  font-bold rounded-[3px]">
+            <div className=" cursor-pointer px-[18px] h-[36px] flex justify-center items-center border-[1px] border-gray-200  font-bold rounded-[3px]">
               Continue Shopping
             </div>
 
-            <div className=" w-[105px] h-[36px] flex justify-center items-center bg-[#6576FF] text-white font-bold rounded-[3px]">
+            <div
+              onClick={() => setToggle(false)}
+              className=" cursor-pointer w-[105px] h-[36px] flex justify-center items-center bg-[#6576FF] text-white font-bold rounded-[3px]"
+            >
               Checkout
             </div>
           </div>
