@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import Cart from "./Cart";
 
 type Props = {};
 
 const ProductDetails = (props: Props) => {
+  const [toggle, setToggle] = useState(false);
   return (
     <div className=" w-[1320px] h-[720px] flex items-center gap-[60px]">
       <Image
@@ -137,12 +140,17 @@ const ProductDetails = (props: Props) => {
           <Image src={"/heart.png"} height={20} width={20} alt="" />
         </div>
       </div>
-      <div className=" fixed bottom-[20px] left-[45%] bg-[#FFBB5A] w-[139px] h-[44px] text-[#364A63] rounded-[20px] flex justify-center items-center gap-2">
+      <button
+        onClick={() => setToggle(true)}
+        className=" cursor-pointer  fixed bottom-[20px] left-[45%] bg-[#FFBB5A] w-[139px] h-[44px] text-[#364A63] rounded-[20px] flex justify-center items-center gap-2"
+      >
         <p className=" text-[14px] font-bold">Checkout</p>
         <p className="  bg-white text-black  w-[19px] h-[20px] rounded-[5px] text-[12px]  flex justify-center items-center">
           2
         </p>
-      </div>
+      </button>
+
+      {toggle && <Cart />}
     </div>
   );
 };
