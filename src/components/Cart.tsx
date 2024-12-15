@@ -50,23 +50,23 @@ const Cart = ({ toggle, setToggle, cartItems, total }: Props) => {
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
 
   return (
-    <div className="fixed inset-0 flex justify-center items-center">
-      <div className="bg-white rounded-lg shadow-md p-[44px] w-[651px]">
+    <div className="fixed inset-0 bg-black/50 flex justify-center items-center">
+      <div className="bg-white rounded-lg shadow-md p-[44px] min-w-[651px]">
         <h2 className="text-xl font-bold mb-4">Your Cart</h2>
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="border-b text-[#8091A7]">
-              <th className="py-2 font-normal">Item</th>
-              <th className="py-2 font-normal">Color</th>
-              <th className="py-2 font-normal">Size</th>
-              <th className="py-2 font-normal">Qnt</th>
-              <th className="py-2 font-normal">Price</th>
+              <th className="py-2 font-normal w-[278px]">Item</th>
+              <th className="py-2 font-normal w-[62px]">Color</th>
+              <th className="py-2 font-normal w-[69px]">Size</th>
+              <th className="py-2 font-normal w-[59px]">Qnt</th>
+              <th className="py-2 font-normal w-[59px]">Price</th>
             </tr>
           </thead>
           <tbody>
             {cartItems.map((item, index: any) => (
               <tr key={index} className="border-b">
-                <td className="py-4 flex items-center">
+                <td className="py-4 flex items-center w-[278px]">
                   <img
                     src={item.image}
                     alt={item.name}
@@ -74,10 +74,10 @@ const Cart = ({ toggle, setToggle, cartItems, total }: Props) => {
                   />
                   {item.name}
                 </td>
-                <td className="py-4">{item.color}</td>
-                <td className="py-4 font-bold">{item.size}</td>
-                <td className="py-4">{item.quantity}</td>
-                <td className="py-4">${item.price.toFixed(2)}</td>
+                <td className="py-4 w-[62px]">{item.color}</td>
+                <td className="py-4 font-bold w-[69px]">{item.size}</td>
+                <td className="py-4 w-[59px]">{item.quantity}</td>
+                <td className="py-4 w-[91px]">${item.price.toFixed(2)}</td>
               </tr>
             ))}
             <tr className="">
