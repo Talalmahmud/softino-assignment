@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Live: [https://softino-assignment.vercel.app/]
+
 First, run the development server:
 
 ```bash
@@ -13,10 +15,6 @@ pnpm dev
 # or
 bun dev
 ```
-
-## Live View
-
-Live: [https://softino-assignment.vercel.app/]
 
 ## Local View Process
 
