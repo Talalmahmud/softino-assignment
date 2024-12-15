@@ -56,7 +56,7 @@ const Cart = ({ toggle, setToggle, cartItems, total }: Props) => {
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="border-b text-[#8091A7]">
-              <th className="py-2 font-normal w-[278px]">Item</th>
+              <th className="py-2 font-normal ">Item</th>
               <th className="py-2 font-normal w-[62px]">Color</th>
               <th className="py-2 font-normal w-[69px]">Size</th>
               <th className="py-2 font-normal w-[59px]">Qnt</th>
@@ -66,7 +66,7 @@ const Cart = ({ toggle, setToggle, cartItems, total }: Props) => {
           <tbody>
             {cartItems.map((item, index: any) => (
               <tr key={index} className="border-b">
-                <td className="py-4 flex items-center w-[278px]">
+                <td className="py-4 flex items-center ">
                   <img
                     src={item.image}
                     alt={item.name}
